@@ -3,8 +3,8 @@ WorldInfo {
   coordinateSystem "NUE"
 }
 Viewpoint {
-  orientation 0.024325249220397225 -0.971929943333978 -0.2340095457479797 3.569836527271431
-  position 0.23648214526173097 0.307486654556998 -0.45460838368899464
+  orientation -0.0016769522986183126 -0.9880428714347318 -0.154170269630685 3.4636621802113563
+  position 0.5479482386409004 0.3768341801686256 -1.0178175232398923
 }
 TexturedBackground {
 }
@@ -13,7 +13,12 @@ TexturedBackgroundLight {
 CircleArena {
 }
 TinkerbotsBase {
+  hidden translation_5 -1.098482774242182e-06 6.228049178308372e-07 -1.4524955023464958e-09
+  hidden rotation_5 0.663725232382965 -0.5501866401461548 -0.5067183407997631 2.0212918469683143e-07
+  hidden translation_17 1.0992990406855085e-06 6.228856576300338e-07 -1.3236889778722727e-09
+  hidden rotation_17 0.6637154023622667 0.550100657804077 0.5068245563808212 2.0212918469683143e-07
   translation 0 0.04 0
+  controller "my_controller"
   upSlot TinkerbotsCube {
     name "cube_1"
     upSlot TinkerbotsCube {
@@ -61,6 +66,11 @@ TinkerbotsBase {
     name "cube_-1"
     upSlot TinkerbotsCube {
       name "cube_-2"
+      upASlot TinkerbotsFinger {
+        rotation 0 0 1 1.5707963267948968
+      }
+      upDSlot TinkerbotsFinger {
+      }
     }
   }
 }
