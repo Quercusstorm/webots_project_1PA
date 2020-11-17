@@ -17,13 +17,46 @@ TIME_STEP = 64;
 %  wb_camera_enable(camera, TIME_STEP);
 LF_motor = wb_robot_get_device('LF_motor');
 RF_motor = wb_robot_get_device('RF_motor');
+LR_motor = wb_robot_get_device('LR_motor');
+RR_motor = wb_robot_get_device('RR_motor');
+
+pivot_LF_1 = wb_robot_get_device('pivot_LF_1');
+pivot_LF_2 = wb_robot_get_device('pivot_LF_2');
+
+pivot_RF_1 = wb_robot_get_device('pivot_RF_1');
+pivot_RF_2 = wb_robot_get_device('pivot_RF_2');
+
+pivot_RR_1 = wb_robot_get_device('pivot_RR_1');
+pivot_RR_2 = wb_robot_get_device('pivot_RR_2');
+
+pivot_LR_1 = wb_robot_get_device('pivot_LR_1');
+pivot_LR_2 = wb_robot_get_device('pivot_LR_2');
 
 
 
-wb_motor_set_position(LF_motor, inf);
-wb_motor_set_velocity(LF_motor, 1);
-wb_motor_set_position(RF_motor, inf);
-wb_motor_set_velocity(RF_motor, 1);
+%wb_motor_set_position(LF_motor, inf);
+%wb_motor_set_velocity(LF_motor, 1);
+%wb_motor_set_position(RF_motor, inf);
+%wb_motor_set_velocity(RF_motor, 1);
+wb_motor_set_position(pivot_LF_1, 1.57);
+wb_motor_set_velocity(pivot_LF_1, 1);
+wb_motor_set_position(pivot_LF_2, -1.57);
+wb_motor_set_velocity(pivot_LF_2, 1);
+
+wb_motor_set_position(pivot_RF_1, 1.57);
+wb_motor_set_velocity(pivot_RF_1, 1);
+wb_motor_set_position(pivot_RF_2, -1.57);
+wb_motor_set_velocity(pivot_RF_2, 1);
+
+wb_motor_set_position(pivot_RR_1, 1.57);
+wb_motor_set_velocity(pivot_RR_1, 1);
+wb_motor_set_position(pivot_RR_2, -1.57);
+wb_motor_set_velocity(pivot_RR_2, 1);
+
+wb_motor_set_position(pivot_LR_1, 1.57);
+wb_motor_set_velocity(pivot_LR_1, 1);
+wb_motor_set_position(pivot_LR_2, -1.57);
+wb_motor_set_velocity(pivot_LR_2, 1);
 
 
 

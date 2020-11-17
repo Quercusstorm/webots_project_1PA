@@ -3,8 +3,8 @@ WorldInfo {
   coordinateSystem "NUE"
 }
 Viewpoint {
-  orientation -0.0016769522986183126 -0.9880428714347318 -0.154170269630685 3.4636621802113563
-  position 0.5479482386409004 0.3768341801686256 -1.0178175232398923
+  orientation 0.022112953775498736 0.9929836201112692 0.11616603404627773 3.071230862818659
+  position -0.006174855003807572 0.23168237474041972 -0.9366748401124799
 }
 TexturedBackground {
 }
@@ -13,10 +13,6 @@ TexturedBackgroundLight {
 CircleArena {
 }
 TinkerbotsBase {
-  hidden translation_5 -1.098482774242182e-06 6.228049178308372e-07 -1.4524955023464958e-09
-  hidden rotation_5 0.663725232382965 -0.5501866401461548 -0.5067183407997631 2.0212918469683143e-07
-  hidden translation_17 1.0992990406855085e-06 6.228856576300338e-07 -1.3236889778722727e-09
-  hidden rotation_17 0.6637154023622667 0.550100657804077 0.5068245563808212 2.0212918469683143e-07
   translation 0 0.04 0
   controller "my_controller"
   upSlot TinkerbotsCube {
@@ -24,9 +20,10 @@ TinkerbotsBase {
     upSlot TinkerbotsCube {
       name "cube_2"
       leftSlot TinkerbotsPivot {
-        name "pivot_LF_wheel_1"
+        name "pivot_LF_1"
         slot TinkerbotsPivot {
-          name "pivot_LF_wheel_2"
+          rotation 0 1 0 0
+          name "pivot_LF_2"
           slot TinkerbotsCube {
             name "LF_wheel_cube"
             rightSlot TinkerbotsMotor {
@@ -42,9 +39,10 @@ TinkerbotsBase {
         }
       }
       rightSlot TinkerbotsPivot {
-        name "pivot_RF_wheel_1"
+        name "pivot_RF_1"
         slot TinkerbotsPivot {
-          name "pivot_RF_wheel_2"
+          rotation 0 1 0 0
+          name "pivot_RF_2"
           slot TinkerbotsCube {
             name "RF_wheel_cube"
             leftSlot TinkerbotsMotor {
@@ -66,10 +64,45 @@ TinkerbotsBase {
     name "cube_-1"
     upSlot TinkerbotsCube {
       name "cube_-2"
-      upASlot TinkerbotsFinger {
-        rotation 0 0 1 1.5707963267948968
+      leftSlot TinkerbotsPivot {
+        name "pivot_RR_1"
+        slot TinkerbotsPivot {
+          rotation 0 1 0 0
+          name "pivot_RR_2"
+          slot TinkerbotsCube {
+            name "RR_wheel_cube"
+            rightSlot TinkerbotsMotor {
+              rotation 0 0 1 1.5707963267948968
+              name "RR_motor"
+              backSlot TinkerbotsAxle {
+                rotation 0 1 0 0
+                name "RR_axle"
+                endSlot TinkerbotsWheel {
+                  rotation 0 1 0 0
+                  name "RR_wheel"
+                }
+              }
+            }
+          }
+        }
       }
-      upDSlot TinkerbotsFinger {
+      rightSlot TinkerbotsPivot {
+        name "pivot_LR_1"
+        slot TinkerbotsPivot {
+          rotation 0 1 0 0
+          name "pivot_LR_2"
+          slot TinkerbotsCube {
+            name "LR_wheel_cube"
+            leftSlot TinkerbotsMotor {
+              rotation 0 0 1 1.5707963267948968
+              name "LR_motor"
+              frontSlot TinkerbotsAxle {
+                endSlot TinkerbotsWheel {
+                }
+              }
+            }
+          }
+        }
       }
     }
   }
