@@ -3,8 +3,8 @@ WorldInfo {
   coordinateSystem "NUE"
 }
 Viewpoint {
-  orientation 0.08241565731153071 -0.980833873008533 -0.1765575628201453 4.273584369962361
-  position 0.9518472751965473 0.3781067347197056 -0.41714308508625525
+  orientation 0.024325249220397225 -0.971929943333978 -0.2340095457479797 3.569836527271431
+  position 0.23648214526173097 0.307486654556998 -0.45460838368899464
 }
 TexturedBackground {
 }
@@ -13,41 +13,54 @@ TexturedBackgroundLight {
 CircleArena {
 }
 TinkerbotsBase {
-  translation 0 0.03 0
-  controller "my_controller"
+  translation 0 0.04 0
   upSlot TinkerbotsCube {
+    name "cube_1"
     upSlot TinkerbotsCube {
-      frontSlot TinkerbotsDistanceSensor {
-        rotation 0 0 1 3.141592653589793
-        name "ds"
-      }
-    }
-    leftSlot TinkerbotsCube {
-      rightSlot TinkerbotsMotor {
-        rotation 0 0 1 1.5707996938995747
-        name "motor_left"
-        backSlot TinkerbotsAxle {
-          endSlot TinkerbotsWheel {
+      name "cube_2"
+      leftSlot TinkerbotsPivot {
+        name "pivot_LF_wheel_1"
+        slot TinkerbotsPivot {
+          name "pivot_LF_wheel_2"
+          slot TinkerbotsCube {
+            name "LF_wheel_cube"
+            rightSlot TinkerbotsMotor {
+              rotation 0 0 1 1.5707963267948968
+              name "LF_motor"
+              backSlot TinkerbotsAxle {
+                rotation 0 1 0 0
+                endSlot TinkerbotsWheel {
+                }
+              }
+            }
           }
         }
       }
-    }
-    rightSlot TinkerbotsCube {
-      leftSlot TinkerbotsMotor {
-        rotation 0 0 1 1.5707996938995747
-        name "motor_right"
-        frontSlot TinkerbotsAxle {
-          endSlot TinkerbotsWheel {
+      rightSlot TinkerbotsPivot {
+        name "pivot_RF_wheel_1"
+        slot TinkerbotsPivot {
+          name "pivot_RF_wheel_2"
+          slot TinkerbotsCube {
+            name "RF_wheel_cube"
+            leftSlot TinkerbotsMotor {
+              rotation 0 0 1 1.5707963267948968
+              name "RF_motor"
+              frontSlot TinkerbotsAxle {
+                name "RF_axle"
+                endSlot TinkerbotsWheel {
+                  name "RF_wheel"
+                }
+              }
+            }
           }
         }
       }
     }
   }
-  downBSlot TinkerbotsFinger {
-  }
-  extensionSlot [
-    RobotisLds01 {
-      translation 0 0.04 0.01
+  downSlot TinkerbotsCube {
+    name "cube_-1"
+    upSlot TinkerbotsCube {
+      name "cube_-2"
     }
-  ]
+  }
 }
